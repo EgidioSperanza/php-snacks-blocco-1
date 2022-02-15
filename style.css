@@ -6,3 +6,32 @@ body {
   margin: 0 auto;
   border: 1px solid black;
 }
+.login{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: justify;
+    background-color: #333;
+    color:#FFF;
+    border: 2px solid darkred;
+    padding:20px;
+}
+
+.login-ok, .login-denied{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.login-ok{
+    background-color: rgba(6, 66, 6, 0.267);
+    color: #000;
+}
+.login-denied{
+    background-color: rgba(85, 4, 4, 0.4);
+    color: #FFF;
+}
