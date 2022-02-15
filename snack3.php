@@ -69,19 +69,16 @@ Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z -->
 <body>
     <h2>Le ultime date in cui sono stati registrati posts sono:</h2>
     <ul>
-        <?php
-        $data = array_keys($posts);
-        for ($i = 0; $i < count($data); $i++) {
-            echo '<li>' . $data[$i] . '</li>';
+        <?php 
+        foreach ($posts as $date_posts => $date) {
+            echo "<li> $date_posts </li>";
             echo '<ul>';
-            $data_array = $posts[$data[$i]];
-            for ($ind = 0; $ind < count(array_keys($data_array)); $ind++) {
-                echo '<li>' . $data_array[$ind]['post'] . '</li>';
-            }
-            echo '</ul>';
+            foreach ($date as $post) {
+                echo "<li><h3>" . $post["title"] . "</h3>" . "<h4>" . $post["author"] . "</h4>" . "<p>" . $post["post"] . "</p></li>";
+            };
+            echo "</ul>";
         }
         ?>
-        
     </ul>
 </body>
 </html>
