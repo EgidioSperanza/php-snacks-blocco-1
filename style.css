@@ -1,0 +1,8 @@
+body {
+  text-align: center;
+}
+.game {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
