@@ -12,8 +12,9 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 
     if (
         strlen($username) > 3 &&
-        strpos($email, '@') !== false &&//PHP8str_contains($email, ".") &&
-        strpos($email, '.') !== false &&//PHP8str_contains($email, "@") &&
+        // strpos($email, '@') !== false &&//PHP8str_contains($email, ".") &&
+        // strpos($email, '.') !== false &&//PHP8str_contains($email, "@") &&
+        filter_var($email, FILTER_VALIDATE_EMAIL) &&
         is_numeric($age)
     ) {
         echo '<div class="login-ok"><p>accesso riuscito</p></div>';
